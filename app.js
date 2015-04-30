@@ -22,17 +22,15 @@ function($stateProvider, $urlRouterProvider) {
 
 .factory('posts', [function(){
 	var o = {
-	    posts: []
+	    posts: [
+	      {title: 'post 1', upvotes: 5},
+	      {title: 'post 2', upvotes: 2},
+	      {title: 'post 3', upvotes: 15},
+	      {title: 'post 4', upvotes: 9},
+	      {title: 'post 5', upvotes: 4}
+	    ]
 	  };
 	  return o;
-}])
-
-.controller('PostsCtrl', [
-'$scope',
-'$stateParams',
-'posts',
-function($scope, $stateParams, posts){
-
 }])
 
 .controller('MainCtrl', [
@@ -43,23 +41,8 @@ function($scope, posts){
 
   $scope.posts = posts.posts;
 
-	$scope.posts = [
-	  {title: 'post 1', upvotes: 5},
-	  {title: 'post 2', upvotes: 2},
-	  {title: 'post 3', upvotes: 15},
-	  {title: 'post 4', upvotes: 9},
-	  {title: 'post 5', upvotes: 4}
-	];
-
 	$scope.addPost = function() {
 		if(!$scope.title || $scope.title === '') { return; }
-
-		$scope.posts.push({
-			title: $scope.title, 
-			link: $scope.link,
-			upvotes: 0});
-		$scope.title = '';
-		$scope.link = '';
 
 		// fake comments
 		$scope.posts.push({
@@ -71,11 +54,22 @@ function($scope, posts){
 		    {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
 		  ]
 		});
+		$scope.title = '';
+		$scope.link = '';
 	};
 	
 	$scope.incrementUpvotes = function(post) {
 	  post.upvotes += 1;
 	};
+}])
+
+.controller('PostsCtrl', [
+'$scope',
+'$stateParams',
+'posts',
+function($scope, $stateParams, posts){
+	$scope.post = posts.posts[$stateParams.id];
+	
 }]);
 
 
