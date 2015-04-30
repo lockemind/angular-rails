@@ -6,16 +6,19 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <!--  angular js -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <!-- ui-router -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
     <script src="app.js"></script>
-    <!-- 
     <style> .glyphicon-thumbs-up { cursor:pointer } </style>
- -->
+ 
 </head>
 
-<body ng-app="flapperNews" ng-controller="MainCtrl">
+<body ng-app="flapperNews">
     
-    <div class="page-header">
-      <h1>My Angular App!</h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <ui-view></ui-view>
+      </div>
     </div>
 
     <div ng-repeat="post in posts | orderBy:'-upvotes'">
@@ -45,6 +48,15 @@
 
       <button type="submit" class="btn btn-primary">Post</button>
     </form>
+
+
+    <script type="text/ng-template" id="/home.html">
+   <div class="page-header">
+     <h1>My Angular App!</h1>
+   </div>
+
+   <!-- rest of template -->
+ </script>
 </body>
 
 </html>

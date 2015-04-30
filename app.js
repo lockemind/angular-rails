@@ -1,9 +1,35 @@
 
-angular.module('flapperNews', [])
+angular.module('flapperNews', ['ui.router'])
+
+.config([
+'$stateProvider',
+'$urlRouterProvider',
+function($stateProvider, $urlRouterProvider) {
+
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: '/home.html',
+      controller: 'MainCtrl'
+    });
+
+  $urlRouterProvider.otherwise('home');
+}])
+
+.factory('posts', [function(){
+	var o = {
+	    posts: []
+	  };
+	  return o;
+}])
+
 .controller('MainCtrl', [
 '$scope',
-function($scope){
+'posts', // injecting service into controller
+function($scope, posts){
   $scope.test = 'Hello world!';
+
+  $scope.posts = posts.posts;
 
 	$scope.posts = [
 	  {title: 'post 1', upvotes: 5},
