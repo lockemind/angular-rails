@@ -60,3 +60,871 @@ Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01
 
 
 Started GET "/assets/application.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-30 19:16:09 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:17:58 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app.js" for ::1 at 2015-04-30 19:17:58 +0100
+
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (12.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.9ms)
+
+
+Started GET "/" for ::1 at 2015-04-30 19:17:58 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app.js" for ::1 at 2015-04-30 19:17:58 +0100
+
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (21.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-30 19:39:26 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (164.2ms)
+Completed 500 Internal Server Error in 200ms
+
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'):
+    13: 	    <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+    14: 	 
+    15: 		  <%= stylesheet_link_tag    'application', media: 'all' %>
+    16: 		  <%= javascript_include_tag 'application' %>
+    17: 		  <%= csrf_meta_tags %>
+    18: 	</head>
+    19: 
+  app/assets/javascripts/application.js:1
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__1986039195121179555_70256744022640'
+  app/controllers/application_controller.rb:7:in `angular'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-30 19:41:38 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (555.6ms)
+Completed 200 OK in 566ms (Views: 565.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app.js" for ::1 at 2015-04-30 19:41:39 +0100
+
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (21.3ms)
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:41:39 +0100
+
+
+Started GET "/assets/application.self-08dfe09bb4bf97f24a3e60ce944dd48aa989c2d43580342080df6d6b82c346e3.css?body=1" for ::1 at 2015-04-30 19:41:39 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:41:39 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:41:39 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:41:39 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:41:39 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:42:17 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:42:17 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:42:17 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:42:17 +0100
+
+
+Started GET "/assets/application.self-08dfe09bb4bf97f24a3e60ce944dd48aa989c2d43580342080df6d6b82c346e3.css?body=1" for ::1 at 2015-04-30 19:42:17 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:42:17 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:42:26 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-08dfe09bb4bf97f24a3e60ce944dd48aa989c2d43580342080df6d6b82c346e3.css?body=1" for ::1 at 2015-04-30 19:42:26 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:42:26 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:42:26 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:42:26 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:42:26 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:42:34 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app.js" for ::1 at 2015-04-30 19:42:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (19.8ms)
+
+
+Started GET "/assets/application.self-08dfe09bb4bf97f24a3e60ce944dd48aa989c2d43580342080df6d6b82c346e3.css?body=1" for ::1 at 2015-04-30 19:42:35 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:42:35 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:42:35 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:42:35 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:42:35 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:43:31 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (266.4ms)
+Completed 200 OK in 310ms (Views: 309.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-08dfe09bb4bf97f24a3e60ce944dd48aa989c2d43580342080df6d6b82c346e3.css?body=1" for ::1 at 2015-04-30 19:43:32 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:43:32 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:43:32 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:43:32 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:43:32 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:43:33 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 20ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-08dfe09bb4bf97f24a3e60ce944dd48aa989c2d43580342080df6d6b82c346e3.css?body=1" for ::1 at 2015-04-30 19:43:33 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:43:33 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:43:33 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:43:33 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:43:33 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:46:26 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 79ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9e75352ebe61b380e7d3ead44bf1ec67078ff7f697216b37f97e1218cc580677.css?body=1" for ::1 at 2015-04-30 19:46:26 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:46:26 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:46:26 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:46:26 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:46:26 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:46:33 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9e75352ebe61b380e7d3ead44bf1ec67078ff7f697216b37f97e1218cc580677.css?body=1" for ::1 at 2015-04-30 19:46:33 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:46:33 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:46:33 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:46:33 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:46:33 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:53:51 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 21ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9e75352ebe61b380e7d3ead44bf1ec67078ff7f697216b37f97e1218cc580677.css?body=1" for ::1 at 2015-04-30 19:53:51 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:53:51 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:53:51 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:53:51 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:53:51 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:55:07 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9e75352ebe61b380e7d3ead44bf1ec67078ff7f697216b37f97e1218cc580677.css?body=1" for ::1 at 2015-04-30 19:55:07 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:55:07 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:55:07 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:55:07 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:55:07 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 19:55:18 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9e75352ebe61b380e7d3ead44bf1ec67078ff7f697216b37f97e1218cc580677.css?body=1" for ::1 at 2015-04-30 19:55:18 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 19:55:18 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 19:55:18 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 19:55:18 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 19:55:18 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:06:09 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (66.4ms)
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-92f40140f6a5bc12983846613397552ff4a599cdac550a26b0f7bcd3296e6749.css?body=1" for ::1 at 2015-04-30 20:06:09 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:06:09 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:06:09 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:06:09 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:06:09 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:06:23 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-92f40140f6a5bc12983846613397552ff4a599cdac550a26b0f7bcd3296e6749.css?body=1" for ::1 at 2015-04-30 20:06:23 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:06:23 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:06:23 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:06:23 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:06:23 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:07:44 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 79ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:07:44 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:07:44 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:07:44 +0100
+
+
+Started GET "/assets/application.self-d35bf9ce00321e656542e5c66521ba77a4e2ea1d15002a596edfbfb69aaf9af7.css?body=1" for ::1 at 2015-04-30 20:07:44 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:07:44 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:07:47 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d35bf9ce00321e656542e5c66521ba77a4e2ea1d15002a596edfbfb69aaf9af7.css?body=1" for ::1 at 2015-04-30 20:07:47 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:07:47 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:07:47 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:07:47 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:07:47 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:07:56 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e2c5305c2a1250a335f3c0882a7697be3a43b6df46048c2084ba91baae3931e7.css?body=1" for ::1 at 2015-04-30 20:07:56 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:07:56 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:07:56 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:07:56 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:07:56 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:08:02 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:08:02 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:08:02 +0100
+
+
+Started GET "/assets/application.self-58daface1a3e3dd54ff13a4b7bcd500a4f298db770a93c5e9a5a16f7ae950364.css?body=1" for ::1 at 2015-04-30 20:08:02 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:08:02 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:08:02 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:08:08 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 75ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:08:08 +0100
+
+
+Started GET "/assets/application.self-b61518e446b731530bdce26dd08aa5193ee16dccbfefafcb83c14656602ddd9f.css?body=1" for ::1 at 2015-04-30 20:08:08 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:08:08 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:08:08 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:08:08 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:08:13 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-438d680b2a6c29ac3ddc029dcf42dbddee5013ed42e63b9c1b3b3c8142d030f9.css?body=1" for ::1 at 2015-04-30 20:08:14 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:08:14 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:08:14 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:08:14 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:08:14 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:08:28 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 72ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-58daface1a3e3dd54ff13a4b7bcd500a4f298db770a93c5e9a5a16f7ae950364.css?body=1" for ::1 at 2015-04-30 20:08:28 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:08:28 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:08:28 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:08:28 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:08:28 +0100
+
+
+Started GET "/assets/application.self-58daface1a3e3dd54ff13a4b7bcd500a4f298db770a93c5e9a5a16f7ae950364.css?body=1" for ::1 at 2015-04-30 20:10:43 +0100
+
+
+Started GET "/assets/application.self-58daface1a3e3dd54ff13a4b7bcd500a4f298db770a93c5e9a5a16f7ae950364.css?body=1" for ::1 at 2015-04-30 20:10:56 +0100
+
+
+Started GET "/assets/application.self-58daface1a3e3dd54ff13a4b7bcd500a4f298db770a93c5e9a5a16f7ae950364.css?body=1" for ::1 at 2015-04-30 20:11:04 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:32:39 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (94.4ms)
+Completed 200 OK in 107ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.self-8c0a18ef497d6248739c038ca99120e435b9d0ac33120bf065cd090558f70e73.css?body=1" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/application.self-8ef38c233327bee0aef6173e9056b42fb906d5eea5025d54c64b0f20cb4f5102.css?body=1" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-04-30 20:32:39 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:32:47 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.self-8c0a18ef497d6248739c038ca99120e435b9d0ac33120bf065cd090558f70e73.css?body=1" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/application.self-8ef38c233327bee0aef6173e9056b42fb906d5eea5025d54c64b0f20cb4f5102.css?body=1" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-04-30 20:32:47 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:33:17 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 91ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.self-8c0a18ef497d6248739c038ca99120e435b9d0ac33120bf065cd090558f70e73.css?body=1" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/application.self-f9ecc503685523b804a0f02a2ae501bb190b025b8354ec053661d70988296034.css?body=1" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-04-30 20:33:17 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:33:22 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 75ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-912f2fe31989e862da2122d116cf59b5cb03e1f1e4ce342090f44c25a582d5be.css?body=1" for ::1 at 2015-04-30 20:33:22 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:33:22 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:33:22 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:33:22 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:33:22 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:33:30 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-94ac8309e73778736a059bcbd06b2a564407378de6cd00f0b0e18a36545427dd.css?body=1" for ::1 at 2015-04-30 20:33:30 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:33:30 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:33:30 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:33:30 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:33:30 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:33:35 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 83ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:33:35 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:33:35 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:33:35 +0100
+
+
+Started GET "/assets/application.self-7066513b1107f7ad24945399633fb2d464c147192605fe7717338d3cfc171421.css?body=1" for ::1 at 2015-04-30 20:33:35 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:33:35 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:33:42 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f9ecc503685523b804a0f02a2ae501bb190b025b8354ec053661d70988296034.css?body=1" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.self-8c0a18ef497d6248739c038ca99120e435b9d0ac33120bf065cd090558f70e73.css?body=1" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-04-30 20:33:42 +0100
+
+
+Started GET "/" for ::1 at 2015-04-30 20:41:30 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 74ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.self-8c0a18ef497d6248739c038ca99120e435b9d0ac33120bf065cd090558f70e73.css?body=1" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router.self-2215eb232f1e18b0a0c9b66db515908ff38159603f4bd9f09ae493eeccdb74b5.js?body=1" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/angular/angular.self-8ffda33ea6b6f0dee40d4c5dca6c5096b06bf120fc448aebb9b5d9f9d2cd9a55.js?body=1" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/application.self-8ef38c233327bee0aef6173e9056b42fb906d5eea5025d54c64b0f20cb4f5102.css?body=1" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/app.self-ae8755382af16f1858b0e8a6e8c5e26255bac9d30cb35cca01cdd7f8c135c687.js?body=1" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/application.self-6a3cf5192354f71615ac51034b3e97c20eda99643fcaf5bbe6d41ad59bd12167.js?body=1" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-04-30 20:41:30 +0100
+
+
+Started GET "/assets/application.self-58daface1a3e3dd54ff13a4b7bcd500a4f298db770a93c5e9a5a16f7ae950364.css?body=1" for ::1 at 2015-05-01 00:54:21 +0100
