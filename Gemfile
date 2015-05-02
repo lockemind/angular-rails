@@ -16,6 +16,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'sprockets', '< 3'
 gem 'angular-rails-templates'
+
+# The controller-level `respond_to' feature has been extracted 
+# to the `responders` gem. Add it to your Gemfile to continue 
+# using this feature: gem 'responders', '~> 2.0' 
+gem 'responders', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

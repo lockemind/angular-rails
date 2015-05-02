@@ -30374,3 +30374,122 @@ Migrating to CreateComments (20150501172500)
             FROM sqlite_temp_master
             WHERE name='index_comments_on_post_id' AND type='index'
 [0m
+
+
+Started GET "/" for ::1 at 2015-05-02 15:06:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 15:06:43 +0100
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (8.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (17.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 15:09:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (306.5ms)
+Completed 200 OK in 339ms (Views: 338.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/app-de11118adcdfee70ff774e8b152d3858.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/home/_home-9f9d058cc774ab6c581c9d9840ce1372.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/home/mainCtrl-8c57da504c7002503649f10a07fbf268.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/posts/posts-7666f0af5ac3a299dd7e5d484ecbfcfe.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/posts/postsCtrl-fbf4726589537f539adeb6b2c20ef651.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/application-70875eb9f5a2b5d75cf64def5dfb2aa0.js?body=1" for ::1 at 2015-05-02 15:09:25 +0100
+
+
+Started GET "/assets/app-de11118adcdfee70ff774e8b152d3858.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/home/_home-9f9d058cc774ab6c581c9d9840ce1372.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/home/mainCtrl-8c57da504c7002503649f10a07fbf268.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/posts/posts-7666f0af5ac3a299dd7e5d484ecbfcfe.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/posts/postsCtrl-fbf4726589537f539adeb6b2c20ef651.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/application-70875eb9f5a2b5d75cf64def5dfb2aa0.js?body=1" for ::1 at 2015-05-02 15:09:26 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 15:09:26 +0100
