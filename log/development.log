@@ -32529,3 +32529,3163 @@ Processing by CommentsController#upvote as JSON
   [1m[35mSQL (0.2ms)[0m  UPDATE "comments" SET "upvotes" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["upvotes", 3], ["updated_at", "2015-05-02 15:31:33.654083"], ["id", 2]]
   [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
 Completed 204 No Content in 5ms (ActiveRecord: 1.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20150502154217)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/narc/Dev/april_projects/angular-rails/db/migrate/20150502154217_devise_create_users.rb:34)
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150502154217"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddUsernameToUser (20150502154333)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150502154333"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for ::1 at 2015-05-02 17:55:08 +0100
+
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007f9177b4bbe8>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 21:21:47 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 21:24:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (10.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-05-02 21:24:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (226.7ms)
+Completed 200 OK in 261ms (Views: 260.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/app-377e5bc7a3aa8c2ecd810773c533f33e.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/application-e0ad2a1047c69325bb367b46f731769d.js?body=1" for ::1 at 2015-05-02 21:24:53 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 21:24:54 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:24:54 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 52ms (Views: 38.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 21:24:54 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 21:29:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (248.0ms)
+Completed 200 OK in 286ms (Views: 285.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/application-4aae5e918e25d493d2bc1732d880cc10.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:29:49 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 46ms (Views: 34.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 21:29:49 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 21:41:26 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (180.1ms)
+Completed 200 OK in 257ms (Views: 256.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/application-a5951f11a83003066c9eed202be7ca58.js?body=1" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:41:26 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 21:41:26 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 21:41:32 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 115ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/application-a5951f11a83003066c9eed202be7ca58.js?body=1" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:41:33 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 21:41:33 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 21:41:49 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (88.2ms)
+Completed 200 OK in 165ms (Views: 164.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/application-a5951f11a83003066c9eed202be7ca58.js?body=1" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:41:49 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 21:41:49 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 21:41:50 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 21:42:45 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 188ms (Views: 187.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/assets/application-a5951f11a83003066c9eed202be7ca58.js?body=1" for ::1 at 2015-05-02 21:42:45 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:42:46 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 21:56:50 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 274ms (Views: 273.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/nav/navCtrl-2c5e631bbd21d141cd17bbd5a138632a.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/application-99e53a9cf264f01e9b95ebcfded08f59.js?body=1" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 21:56:50 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 21:56:50 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 21:56:51 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:07:00 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (133.8ms)
+Completed 200 OK in 211ms (Views: 211.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:07:00 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:07:00 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:07:00 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 9ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:07:01 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:07:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (212.7ms)
+Completed 200 OK in 289ms (Views: 288.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:07:26 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 92ms (Views: 79.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:07:26 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:07:26 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:08:55 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 161ms (Views: 160.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:08:56 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:08:56 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:08:56 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:08:58 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 141ms (Views: 141.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:08:58 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:08:58 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:08:58 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:08:58 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:08:58 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:08:58 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:08:59 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:08:59 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:08:59 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:10:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (193.0ms)
+Completed 200 OK in 269ms (Views: 268.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:10:24 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:10:24 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:10:24 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:10:25 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:10:28 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:10:28 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:10:28 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:10:28 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:10:32 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:10:37 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 164ms (Views: 164.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:10:37 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:10:37 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:10:37 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:10:46 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 167ms (Views: 166.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/application-6e9eb36f7afb54ea4ee1c5f1208522e4.js?body=1" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:10:46 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:10:46 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:10:47 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:10:47 +0100
+
+
+Started GET "/posts/1.json" for ::1 at 2015-05-02 22:11:56 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:11:58 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2.json" for ::1 at 2015-05-02 22:12:00 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:12:01 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts.json" for ::1 at 2015-05-02 22:12:26 +0100
+Processing by PostsController#create as JSON
+  Parameters: {"title"=>"asdadasd", "post"=>{"title"=>"asdadasd"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "asdadasd"], ["created_at", "2015-05-02 21:12:26.621746"], ["updated_at", "2015-05-02 21:12:26.621746"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 201 Created in 14ms (Views: 1.4ms | ActiveRecord: 2.8ms)
+
+
+Started PUT "/posts/3/upvote.json" for ::1 at 2015-05-02 22:12:29 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "upvotes" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["upvotes", 1], ["updated_at", "2015-05-02 21:12:29.646334"], ["id", 3]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 22:18:17 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (224.8ms)
+Completed 200 OK in 267ms (Views: 266.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/application-1cf685ab9fcdc6e2afd779abe4c013f6.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/app-9eec7f8b52df81aee9a08e19b3921fe2.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/assets/application-1cf685ab9fcdc6e2afd779abe4c013f6.js?body=1" for ::1 at 2015-05-02 22:18:17 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:18:17 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:18:17 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:18:18 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:19:33 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (186.9ms)
+Completed 200 OK in 276ms (Views: 275.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/app-690dee9c632c8411c93d2e25892adab2.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/application-6fbe08222f1b0863f43297734b9c4a55.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:19:34 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:19:34 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:19:34 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:19:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (238.7ms)
+Completed 200 OK in 324ms (Views: 323.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/app-690dee9c632c8411c93d2e25892adab2.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/application-6fbe08222f1b0863f43297734b9c4a55.js?body=1" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:19:48 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:19:48 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 71ms (Views: 61.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:19:48 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:19:49 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:19:58 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 22:22:07 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (177.8ms)
+Completed 200 OK in 253ms (Views: 252.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/application-8c169f0757eea132d20f35c269742cfa.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:22:08 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:22:08 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:22:08 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:22:12 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:22:27 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: username
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pedr.amaral@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 89ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 22:26:06 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 178ms (Views: 172.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/assets/application-8c169f0757eea132d20f35c269742cfa.js?body=1" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:26:06 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:26:06 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:26:06 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:26:09 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 23ms (Views: 15.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:26:09 +0100
+
+
+Started GET "/posts/2.json" for ::1 at 2015-05-02 22:26:11 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:26:12 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 22:26:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (233.2ms)
+Completed 200 OK in 318ms (Views: 314.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/application-8c169f0757eea132d20f35c269742cfa.js?body=1" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:26:25 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:26:25 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 9ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:26:25 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:26:28 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:26:44 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pedr.amaral@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 84ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:26:54 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/" for ::1 at 2015-05-02 22:28:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (242.9ms)
+Completed 200 OK in 340ms (Views: 333.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/application-8c169f0757eea132d20f35c269742cfa.js?body=1" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:28:32 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:28:32 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 10ms
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:28:32 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 35ms (Views: 25.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:28:33 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:28:35 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 163ms (Views: 162.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/auth/authCtrl-7955d3d3f262f82aa4153b571b5f5647.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/application-8c169f0757eea132d20f35c269742cfa.js?body=1" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:28:35 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:28:35 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:28:35 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:28:36 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:28:38 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:29:01 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"lockemind", "password"=>"[FILTERED]", "email"=>"pedr.amaral@gmail.com"}, "registration"=>{"user"=>{"username"=>"lockemind", "password"=>"[FILTERED]", "email"=>"pedr.amaral@gmail.com"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pedr.amaral@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 87ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 22:32:30 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (194.2ms)
+Completed 200 OK in 277ms (Views: 276.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/auth/authCtrl-857c7424559fbc5d26f46c250eeab5a7.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/application-9dc7456e0786a5b4c6d06f4fe50692e2.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started GET "/assets/application-9dc7456e0786a5b4c6d06f4fe50692e2.js?body=1" for ::1 at 2015-05-02 22:32:30 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:32:30 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:32:30 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:32:43 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"p@p.p", "username"=>"p", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"p@p.p", "username"=>"p", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'p@p.p' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 67ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:33:34 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"p@p.p", "username"=>"p", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"p@p.p", "username"=>"p", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'p@p.p' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 66ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:33:36 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"p@p.p", "username"=>"p", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"p@p.p", "username"=>"p", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'p@p.p' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 71ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 22:33:38 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (180.7ms)
+Completed 200 OK in 261ms (Views: 260.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:33:39 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:33:39 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:33:39 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:33:46 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"p@w.p", "username"=>"p", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"p@w.p", "username"=>"p", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'p@w.p' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 78ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:35:30 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:35:30 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:35:33 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 153ms (Views: 152.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:35:33 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:35:33 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:35:33 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:35:34 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 22:41:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (199.8ms)
+Completed 200 OK in 287ms (Views: 283.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 22:41:07 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 22:41:08 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 85ms (Views: 26.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:41:08 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 22:41:08 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 22:41:10 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 22:41:17 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"p@o.p", "username"=>"p", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"p@o.p", "username"=>"p", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'p@o.p' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 98ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 23:19:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (251.1ms)
+Completed 200 OK in 342ms (Views: 338.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 23:19:09 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 23:19:09 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 23:19:09 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 23:19:10 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:19:10 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 11ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:19:10 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:19:12 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 82ms (Views: 69.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 23:19:12 +0100
+
+
+Started GET "/" for ::1 at 2015-05-02 23:19:14 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (88.9ms)
+Completed 200 OK in 167ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:19:15 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:19:15 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 23:19:15 +0100
+
+
+Started GET "/posts/2.json" for ::1 at 2015-05-02 23:19:17 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+Completed 200 OK in 10ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts/2/comments.json" for ::1 at 2015-05-02 23:19:20 +0100
+Processing by CommentsController#create as JSON
+  Parameters: {"body"=>"dsadfasdf", "author"=>"user", "post_id"=>"2", "comment"=>{"body"=>"dsadfasdf"}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:19:23 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:19:32 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "username"=>"123123", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"pedr@asd.pt", "username"=>"123123", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pedr@asd.pt' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "pedr@asd.pt"], ["encrypted_password", "$2a$10$9HmiDhQvxlXwyHwMs6YFMuygu/TqEQDAXBphELEkgjnHl.OIQi3AG"], ["username", "123123"], ["created_at", "2015-05-02 22:19:32.904300"], ["updated_at", "2015-05-02 22:19:32.904300"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-05-02 22:19:32.907281"], ["current_sign_in_at", "2015-05-02 22:19:32.907281"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-05-02 22:19:32.908152"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 201 Created in 96ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:19:32 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out.json" for ::1 at 2015-05-02 23:19:53 +0100
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 7ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:19:54 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:19:55 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:20:11 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pedr.amaral@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 66ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:13 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:21 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr.amaral@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr.amaral@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "pedr.amaral@gmail.com"]]
+Completed 401 Unauthorized in 4ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:25 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:31 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:32 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:34 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:20:34 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:20:51 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"login@pedro.pt", "username"=>"lockemind", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"login@pedro.pt", "username"=>"lockemind", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'login@pedro.pt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 71ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:20:53 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"login@pedro.pt", "username"=>"lockemind", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"login@pedro.pt", "username"=>"lockemind", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'login@pedro.pt' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 107ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:21:04 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"login@pedro.pt", "username"=>"pedro", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"login@pedro.pt", "username"=>"pedro", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'login@pedro.pt' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 66ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:21:07 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 23:21:10 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 164ms (Views: 163.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 23:21:10 +0100
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:21:10 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 49ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:21:10 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 23:21:11 +0100
+
+
+Started GET "/posts/2.json" for ::1 at 2015-05-02 23:21:13 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:21:14 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:21:30 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"carlos@gmail.com", "username"=>"carlos", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"carlos@gmail.com", "username"=>"carlos", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'carlos@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 69ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:21:34 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"carlos@gmail.com", "username"=>"carlos", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"carlos@gmail.com", "username"=>"carlos", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'carlos@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 72ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:21:35 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"carlos@gmail.com", "username"=>"carlos", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"carlos@gmail.com", "username"=>"carlos", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'carlos@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for ::1 at 2015-05-02 23:24:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (186.5ms)
+Completed 200 OK in 272ms (Views: 269.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:18 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 11ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:18 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 23:24:18 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:21 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 80ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:23 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 62ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:25 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 62ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:25 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 67ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:28 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 64ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:31 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 63ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:32 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 67ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:33 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"pedr@asd.pt", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "pedr@asd.pt"]]
+Completed 401 Unauthorized in 64ms
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:24:38 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 67ms (Views: 21.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts.json" for ::1 at 2015-05-02 23:24:41 +0100
+Processing by PostsController#create as JSON
+  Parameters: {"title"=>"asdasdd", "post"=>{"title"=>"asdasdd"}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:24:43 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:24:55 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"lolita@lol.pt", "username"=>"lolita", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"lolita@lol.pt", "username"=>"lolita", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'lolita@lol.pt' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 83ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:25:29 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:25:31 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/" for ::1 at 2015-05-02 23:26:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (222.2ms)
+Completed 200 OK in 305ms (Views: 301.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/app-d35cd6e116d2fafa1cd16943f8478843.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/auth/_login-215f03955f545dbae2f286b8567095a0.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/auth/_register-635d80e6725190ecdc4ede4103745720.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/auth/authCtrl-032367413f983891f5520fa75611bd8d.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/home/_home-691320cde5c4780bbee46852584e2852.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/home/mainCtrl-22c39712f410bccb803b66c990d1618a.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/nav/navCtrl-f459f1eefc5a3dd936f00fab07186e4c.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/posts/_posts-551fdeed0d1788a5bd26e19783200047.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started GET "/assets/application-25b2afae2c9ac1ba5f143ce96500c439.js?body=1" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:26:02 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:26:02 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 33ms (Views: 25.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-02 23:26:02 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:26:04 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:26:21 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 89ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:26:24 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 68ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap.css.map" for ::1 at 2015-05-02 23:26:29 +0100
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:26:30 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 73ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:26:35 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 67ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:26:37 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:26:38 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 67ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:27:00 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 68ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:27:07 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"helio@gmail.com", "username"=>"helio", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'helio@gmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "helio@gmail.com"], ["encrypted_password", "$2a$10$iZMgLAmZESg6ZOFZAVZv0eJpw3B3RVHI/X5z/ZDcPSlUJcJkQ2l.i"], ["username", "helio"], ["created_at", "2015-05-02 22:27:07.710603"], ["updated_at", "2015-05-02 22:27:07.710603"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-05-02 22:27:07.713344"], ["current_sign_in_at", "2015-05-02 22:27:07.713344"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-05-02 22:27:07.713922"], ["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 75ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:27:07 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out.json" for ::1 at 2015-05-02 23:27:10 +0100
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 5ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-02 23:27:11 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users.json" for ::1 at 2015-05-02 23:27:25 +0100
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"pedr.amaral@gmail.com", "username"=>"lockemind", "password"=>"[FILTERED]"}}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'pedr.amaral@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "pedr.amaral@gmail.com"], ["encrypted_password", "$2a$10$XC9n3yN.0hp.4l7LsQhQEOlnmhypCxJvWYM55OKimjt08bf7xfamO"], ["username", "lockemind"], ["created_at", "2015-05-02 22:27:25.362497"], ["updated_at", "2015-05-02 22:27:25.362497"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-05-02 22:27:25.365854"], ["current_sign_in_at", "2015-05-02 22:27:25.365854"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-05-02 22:27:25.367051"], ["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 80ms (Views: 0.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-02 23:27:25 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
