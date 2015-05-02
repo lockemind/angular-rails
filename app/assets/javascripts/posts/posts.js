@@ -1,5 +1,5 @@
 angular.module('flapperNews')
-.factory('posts', [function(){
+.factory('posts', ['$http', function($http){
 	var o = {
 	    posts: [
 	      {title: 'post 1', upvotes: 5, comments: []},
@@ -10,4 +10,10 @@ angular.module('flapperNews')
 	    ]
 	  };
 	  return o;
+
+	  o.getAll = function() {
+      return $http.get('/posts.json').success(function(data){
+        angular.copy(data, o.posts);
+      });
+    };
 }])
