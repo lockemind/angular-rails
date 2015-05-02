@@ -1,4 +1,3 @@
-
 angular.module('flapperNews', ['ui.router', 'templates'])
 
 .config([
@@ -10,11 +9,16 @@ function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/home',
       templateUrl: 'home/_home.html',
-      controller: 'MainCtrl',
+      controller: 'MainCtrl'
+      ,
       resolve: {
+         // simpleObj:  function(){
+         //    return [{title: 'post 1', upvotes: 5, comments: []}];
+         // }
         postPromise: ['posts', function(posts){
           return posts.getAll();
         }]
+        
       }
     })
     .state('posts', {

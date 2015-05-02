@@ -16,6 +16,24 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'sprockets', '< 3'
 gem 'angular-rails-templates'
+
+# The controller-level `respond_to' feature has been extracted 
+# to the `responders` gem. Add it to your Gemfile to continue 
+# using this feature: gem 'responders', '~> 2.0' 
+gem 'responders', '~> 2.0'
+
+# You may have noticed that we recieved a failed 422 Unprocessable Entity 
+# response from Rails. This is because Rails has csrf protection enabled 
+# by default, and Angular isn't sending the token to Rails when we're 
+# trying to add a post. Thankfully $http supports sending csrf tokens out 
+# of the box as a X-XSRF-TOKEN header, as long as it detects a XSRF-TOKEN 
+# cookie with a token in it. There's also happens to be a gem called 
+# angular_rails_csrf which we'll add to our project which will have 
+# Rails automatically send the cookie to Angular and also validate the 
+# header when Angular is submitting data, that way all we need to do is 
+# 	drop in the gem and everything should just work
+gem 'angular_rails_csrf'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
