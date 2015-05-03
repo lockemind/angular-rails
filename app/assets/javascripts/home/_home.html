@@ -14,6 +14,7 @@
      <span ng-hide="post.link">
        {{post.title}}
      </span>
+     posted by <a ng-href="#/users/{{post.user.username}}">{{post.user.username}}</a>
      <span>
        <!-- <a href="#/posts/{{$index}}">Comments</a> -->
        <a href="#/posts/{{post.id}}">Comments</a>
