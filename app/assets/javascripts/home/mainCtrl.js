@@ -4,7 +4,7 @@ angular.module('flapperNews')
 'posts', // injecting service into controller
 function($scope, posts){
   $scope.test = 'Hello world!';
-
+  
   $scope.posts = posts.posts;
 
   $scope.addPost = function(){

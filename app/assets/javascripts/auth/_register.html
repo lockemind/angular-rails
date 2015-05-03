@@ -1,6 +1,16 @@
+
 <div class="page-header">
   <h1>Register</h1>
 </div>
+
+
+<span ng-show="errors">
+  <div ng-repeat="error in errors">
+    <span class="label label-warning" ng-show="error">
+      {{error.toString()}}
+    </span>
+  </div>  
+</span>
 
 <form ng-submit="register()">
   <div class="input-group">

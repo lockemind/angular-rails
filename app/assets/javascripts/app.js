@@ -14,7 +14,6 @@ function($stateProvider, $urlRouterProvider) {
         postPromise: ['posts', function(posts){
           return posts.getAll();
         }]
-        
       }
     })
     .state('posts', {

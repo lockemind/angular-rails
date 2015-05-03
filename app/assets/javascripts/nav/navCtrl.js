@@ -21,5 +21,6 @@ function($scope, Auth){
    $scope.$on('devise:logout', function (e, user){
      $scope.user = {};
    });
+
 }]);
 
