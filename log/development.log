@@ -39489,3 +39489,108 @@ Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-03 16:35:40 +0100
+
+
+Started GET "/" for ::1 at 2015-05-04 10:34:03 +0100
+Processing by ApplicationController#angular as HTML
+  Rendered layouts/application.html.erb within layouts/application (629.1ms)
+Completed 200 OK in 889ms (Views: 886.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/css/bootstrap-6ba7a1598d41517fda185ad110471bd7.css?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/angular/angular-4d9f3d92a489ec19b3256abf7e10c0fd.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/application-4bb1b3099c3e6bca850c1372e231a14f.css?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/angular-rails-templates-8256c0f1a1a3da730b44a528a97df5a7.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/angular-devise/lib/devise-a1244b7d19dc5a21d96263fd0621aa0f.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/angular-ui-router/release/angular-ui-router-c06f97a1963f86b3dd856d8d2a36caa3.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/app-1018bf3647377991f000a0e621934e56.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/auth/_login-28306ae21d11f46086dc570fbea4844b.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/home/_home-04c5b7e4c6361dbac154320afc3a3626.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/auth/authCtrl-5651d2959cf3669b8de1ad81cd8a8f8c.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/home/mainCtrl-78f609c596d6802f239a564401357bdd.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/nav/_nav-f7faa0189ce25d691911ec2e26452e34.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/nav/navCtrl-27387214d6591613beb48227e55b4eab.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/posts/_posts-17cd70a9176e1a6df0044239172494f0.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/posts/posts-247445c5302546f98c13df31dcafa2f7.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started GET "/assets/posts/postsCtrl-d90918170ece864fdfd4b36fa14a1c4d.js?body=1" for ::1 at 2015-05-04 10:34:06 +0100
+
+
+Started POST "/users/sign_in.json" for ::1 at 2015-05-04 10:34:07 +0100
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/posts.json" for ::1 at 2015-05-04 10:34:07 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 544ms (Views: 538.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" for ::1 at 2015-05-04 10:37:06 +0100
+
+
+Started GET "/posts/4.json" for ::1 at 2015-05-04 10:37:13 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-04 10:37:16 +0100
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.9ms)

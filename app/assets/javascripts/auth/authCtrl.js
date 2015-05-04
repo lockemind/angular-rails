@@ -16,18 +16,19 @@ function($scope, $state, Auth){
 	 };
 
 	 $scope.register = function() {
- 	 	 console.log('register running ' , $scope.user);
-	   Auth.register($scope.user).then(
-	   	function(){
-	   	 console.log('trying to go home ');
-	     $state.go('home');
-	   },
-	   function(par){ 
-	   	 $scope.errors = par.data.errors;
+ 	 	console.log('register running ' , $scope.user);
+	  Auth.register($scope.user).then(
+	  	function(){
+	   		console.log('trying to go home ');
+	      $state.go('home');
+	    },
+	    function(par){ 
+	   		$scope.errors = par.data.errors;
 	   	
-	   	 console.log('register failed ', par.data.errors);},
-	   function(par){console.log('trying to go 2 ', par);}
-	 );
+	   	 	console.log('register failed ', par.data.errors);},
+	    function(par){
+	   		console.log('warnings ', par);
+	    }
+	 	);
 	 };
-	 
 }]);
