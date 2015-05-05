@@ -39594,3 +39594,107 @@ Processing by PostsController#index as JSON
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
 Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/4.json" for ::1 at 2015-05-04 10:51:07 +0100
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts.json" for ::1 at 2015-05-04 10:51:13 +0100
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:17 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:17 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:18 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:18 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 0ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:18 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:18 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:19 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:19 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/4/upvote.json" for ::1 at 2015-05-04 10:51:20 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/2/upvote.json" for ::1 at 2015-05-04 10:51:21 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/2/upvote.json" for ::1 at 2015-05-04 10:51:21 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/2/upvote.json" for ::1 at 2015-05-04 10:51:21 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms
+
+
+Started PUT "/posts/2/upvote.json" for ::1 at 2015-05-04 10:51:21 +0100
+Processing by PostsController#upvote as JSON
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms
